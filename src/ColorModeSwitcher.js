@@ -15,7 +15,10 @@ export const ColorModeSwitcher = props => {
       variant="ghost"
       color="current"
       marginLeft="2"
-      onClick={toggleColorMode}
+      onClick={() => {
+        toggleColorMode();
+        props.giveTheme(text);
+      }}
       icon={<SwitchIcon />}
       {...props}
     />
